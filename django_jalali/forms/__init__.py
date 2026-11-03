@@ -98,7 +98,7 @@ class jDateTimeField(forms.Field):
         if self.input_formats:
             for input_format in self.input_formats:
                 try:
-                    return jdatetime.datetime.strptime(value, input_format).date()
+                    return jdatetime.datetime.strptime(value, input_format)
                 except ValueError:
                     pass
 
